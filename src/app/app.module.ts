@@ -17,11 +17,11 @@ const appRoutes: Routes = [{ path: "", redirectTo: "home", pathMatch: "full" }];
     FormsModule,
     HttpModule,
     UpgradeModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { initialNavigation: false }),
     OptionsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [AppComponent]
 })
 export class AppModule {
   ngDoBootstrap() {
