@@ -9,6 +9,7 @@ import { Router } from "@angular/router";
 export class AppComponent {
   title = "app works!";
   constructor(router: Router) {
+    // TODO: Why is it initialized here?
     router.initialNavigation();
   }
 }
