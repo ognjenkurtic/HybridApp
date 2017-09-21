@@ -25,9 +25,9 @@ const routes: Routes = [
 @NgModule({
   imports: [BrowserModule, RouterModule.forChild(routes)],
   declarations: [
-    OptionsComponent
-    // UserOptionsWrapperComponent,
-    // UserOptionsWrapperDirective
+    OptionsComponent,
+    UserOptionsWrapperComponent,
+    UserOptionsWrapperDirective
   ],
   exports: []
 })

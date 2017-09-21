@@ -3,18 +3,12 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { RouterModule, Routes } from "@angular/router";
+import { UpgradeModule } from "@angular/upgrade/static";
 
 import { OptionsModule } from "./options/options.module";
 import { AppComponent } from "./app.component";
-import { OptionsComponent } from "app/options/options.component";
 
-const appRoutes: Routes = [
-  { path: "", redirectTo: "home", pathMatch: "full" },
-  {
-    path: "options",
-    component: OptionsComponent
-  }
-];
+const appRoutes: Routes = [{ path: "", redirectTo: "home", pathMatch: "full" }];
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,10 +16,15 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    UpgradeModule,
     RouterModule.forRoot(appRoutes),
     OptionsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  ngDoBootstrap() {
+    // override to prevent Angular from bootstrapping itself
+  }
+}

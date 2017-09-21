@@ -12,5 +12,5 @@ const component: IExtendedComponentOptions = {
 };
 
 export const UserOptionsModule = angular
-  .module("component_useroptions")
+  .module("component_userOptions", [])
   .component("userOptions", component);
