@@ -18,7 +18,6 @@ if (environment.production) {
 // ng 1 wrapper
 const myapp = angular
   .module("myapp", [UserOptionsModule.name])
-  // TODO: Why do we downgrade app component here?
   .directive("appRoot", <any>downgradeComponent({ component: AppComponent }));
 
 // bootstrap
