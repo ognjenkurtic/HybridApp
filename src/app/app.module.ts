@@ -21,11 +21,11 @@ const appRoutes: Routes = [{ path: "", redirectTo: "home", pathMatch: "full" }];
     OptionsModule
   ],
   providers: [],
-  // TODO: We do not have bootstrap here as we need to bootstrap angularjs
+  // We do not have bootstrap here as we need to bootstrap angularjs
   entryComponents: [AppComponent]
 })
 export class AppModule {
   ngDoBootstrap() {
-    // TODO: override to prevent Angular from bootstrapping itself
+    // Override to prevent Angular from bootstrapping itself
   }
 }
