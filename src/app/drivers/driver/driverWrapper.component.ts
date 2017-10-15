@@ -10,16 +10,16 @@ import {
 import { UpgradeComponent } from "@angular/upgrade/static";
 
 @Component({
-  selector: "old-user-options",
-  template: "<old-user-options-component></old-user-options-component>"
+  selector: "old-driver",
+  template: "<old-driver-component></old-driver-component>"
 })
-export class UserOptionsWrapperComponent {}
+export class DriverWrapperComponent {}
 
-@Directive({ selector: "old-user-options-component" })
-export class UserOptionsWrapperDirective extends UpgradeComponent {
+@Directive({ selector: "old-driver-component" })
+export class DriverWrapperDirective extends UpgradeComponent {
   @Input() userId: string;
   @Output() userDeleted: EventEmitter<string>;
   constructor(elementRef: ElementRef, injector: Injector) {
-    super("userOptions", elementRef, injector);
+    super("driver", elementRef, injector);
   }
 }

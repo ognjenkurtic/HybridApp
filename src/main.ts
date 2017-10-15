@@ -5,7 +5,7 @@ import { UpgradeModule } from "@angular/upgrade/static";
 import { downgradeComponent } from "@angular/upgrade/static";
 
 import { AppModule } from "./app/app.module";
-import { UserOptionsModule } from "app/options/userOptions/userOptions";
+import { DriverModule } from "app/drivers/driver/driver";
 
 import { AppComponent } from "app/app.component";
 
@@ -17,7 +17,7 @@ if (environment.production) {
 
 // ng 1 wrapper
 const myapp = angular
-  .module("myapp", [UserOptionsModule.name])
+  .module("myapp", [DriverModule.name])
   .directive("appRoot", <any>downgradeComponent({ component: AppComponent }));
 
 // bootstrap

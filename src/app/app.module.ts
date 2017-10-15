@@ -5,7 +5,7 @@ import { HttpModule } from "@angular/http";
 import { RouterModule, Routes } from "@angular/router";
 import { UpgradeModule } from "@angular/upgrade/static";
 
-import { OptionsModule } from "./options/options.module";
+import { DriversModule } from "./drivers/drivers.module";
 import { AppComponent } from "./app.component";
 
 const appRoutes: Routes = [{ path: "", redirectTo: "home", pathMatch: "full" }];
@@ -18,7 +18,7 @@ const appRoutes: Routes = [{ path: "", redirectTo: "home", pathMatch: "full" }];
     HttpModule,
     UpgradeModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: false }),
-    OptionsModule
+    DriversModule
   ],
   providers: [],
   // We do not have bootstrap here as we need to bootstrap angularjs

@@ -9,7 +9,18 @@ import { Router } from "@angular/router";
 export class AppComponent {
   title = "app works!";
   constructor(router: Router) {
-    // TODO: Why is it initialized here?
+    /**
+   * Hybrid initialization works as following:
+   * init Angular -> bootstrap Angular JS
+   *
+   * This means the router is already initialized when
+   * AngularJS (which is the host for the root component)
+   * is initialized.
+   *
+   * This is why we have to disable the intitial navigation in the
+   * RouterModule (see app.module.ts) an init the navigation when this
+   * component is ready.
+   */
     router.initialNavigation();
   }
 }
