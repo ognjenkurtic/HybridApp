@@ -17,8 +17,6 @@ export class DriverWrapperComponent {}
 
 @Directive({ selector: "old-driver-component" })
 export class DriverWrapperDirective extends UpgradeComponent {
-  @Input() userId: string;
-  @Output() userDeleted: EventEmitter<string>;
   constructor(elementRef: ElementRef, injector: Injector) {
     super("driver", elementRef, injector);
   }
